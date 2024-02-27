@@ -18,3 +18,15 @@ FTemp = float(FInput)
 CTemp = (FTemp-32)*5/9
 
 print("The temperature in C° is: ", CTemp, sep="")
+
+print("Exercise 3:  C to K converter.")
+CInput = input("Enter the temperature in C°: ")
+CTemp = float(CInput)
+KTemp = CTemp + 273.15
+print("The temperature in K is: ", KTemp, sep="")
+
+print("Exercise 4: K to C converter.")
+KInput = input("Enter the temperature in K: ")
+KTemp = float(KInput)
+CTemp = KTemp - 273.15
+print("The temperature in C° is: ", CTemp, sep="")
