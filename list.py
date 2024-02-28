@@ -3,7 +3,7 @@ def error():
     exit()
 
 
-print("This program was developed by Davi Andrade Macedo.")
+'''print("This program was developed by Davi Andrade Macedo.")
 print("I could do multiple files for this, but I'd rather do it all here.")
 
 
@@ -53,22 +53,22 @@ print("\n\nExercise 5: °C to °R converter.")
 CInput = input("Enter the temperature in °C: ")
 try:
     CTemp = float(CInput)
-    RaTemp = (CTemp/1.8) - 491.67
-    print("The temperature in °R is: ", RaTemp, sep="")
+    RTemp = (CTemp/1.8) + 491.67
+    print("The temperature in °R is: ", RTemp, sep="")
 except:
-    error()
+    error()'''
+
 
 print("\n\nExercise 6: °R to °C converter.")
 RInput = input("Enter the temperature in °R: ")
 try:
     RTemp = float(RInput)
-    CTemp = (RaTemp + 491.67)*1.8
+    CTemp = (RTemp + 491.67)*1.8
     print("The temperature in °C is: ", CTemp, sep="")
 except:
     error()
 
-
-print("\n\nExercise 7: F to K converter.")
+'''print("\n\nExercise 7: F to K converter.")
 print("So, there are two ways to convert Fahrenheit to Kelvin: We can get it from F>C>K or F>K. I'll be using F>C>K.")
 FInput = input("Enter the temperature in °F: ")
 try:
@@ -94,8 +94,8 @@ print("\n\nExercise 9: °F to °R converter.")
 FInput = input("Enter the temperature in °F: ")
 try:
     FTemp = float(FInput)
-    RaTemp = (FTemp/1.8) - 491.67
-    print("The temperature in °R is: ", RaTemp, sep="")
+    RTemp = FTemp + 459.67
+    print("The temperature in °R is: ", RTemp, sep="")
 except:
     error()
 
@@ -106,6 +106,6 @@ try:
     FTemp = RTemp - 459.67
     print("The temperature in °F is: ", FTemp, sep="")
 except:
-    error()
+    error()'''
 
 
