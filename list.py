@@ -46,24 +46,24 @@ try:
     CTemp = KTemp - 273.15
     print("The temperature in °C is: ", CTemp, sep="")
 except:
-    error()
+    error()'''
 
 
 print("\n\nExercise 5: °C to °R converter.")
 CInput = input("Enter the temperature in °C: ")
 try:
     CTemp = float(CInput)
-    RTemp = (CTemp/1.8) + 491.67
+    RTemp = CTemp*9/5 + 491.67
     print("The temperature in °R is: ", RTemp, sep="")
 except:
-    error()'''
+    error()
 
 
 print("\n\nExercise 6: °R to °C converter.")
 RInput = input("Enter the temperature in °R: ")
 try:
     RTemp = float(RInput)
-    CTemp = (RTemp + 491.67)*1.8
+    CTemp = (RTemp - 491.67)/1.8
     print("The temperature in °C is: ", CTemp, sep="")
 except:
     error()
