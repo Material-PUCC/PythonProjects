@@ -64,7 +64,7 @@ try:
     RTemp = float(RInput)
     CTemp = (RTemp - 491.67)/1.8
     print("The temperature in °C is: ", CTemp, sep="")
-except:
+except ValueError:
     error()
 
 print("\n\nExercise 7: F to K converter.")
