@@ -1,7 +1,7 @@
 def error():
     print("Invalid input. Please enter a number.")
     exit()
-
+#sides of the triangle should sum and be longer than the longest side.
 print("This program was developed by Davi Andrade Macedo.")
 print("I could do multiple files for this, but I'd rather do it all here.")
 
