@@ -6,8 +6,7 @@ def error():
 print("This program was developed by Davi Andrade Macedo.")
 print("I could do multiple files for this, but I'd rather do it all here.")
 
-
-'''print("\n\nExercise 1: °C to °F converter.")
+print("\n\nExercise 1: °C to °F converter.")
 
 CInput=input("Enter the temperature in °C: ")
 try:
@@ -210,7 +209,7 @@ try:
     area = (base*height)/2
     print("The area of the triangle is: ", area, "cm².", sep="")
 except:
-    error()'''
+    error()
 
 print("\n\nExercise 20: Area of a square.")
 sideI = input("Enter the length of the side of the square: ")
@@ -232,28 +231,81 @@ try:
 except:
     error()
 
-print("\n\nExercise 22: Area")
+print("\n\nExercise 22: Area of a diamond.")
+diagonal1I = input("Enter the length of the first diagonal of the diamond: ")
+diagonal2I = input("Enter the length of the second diagonal of the diamond: ")
+try:
+    diagonal1 = float(diagonal1I)
+    diagonal2 = float(diagonal2I)
+    area = (diagonal1*diagonal2)/2
+    print("The area of the diamond is: ", area, "cm².", sep="")
+except:
+    error()
 
 
 
 
-print("\n\nExercise 23: Area")
+print("\n\nExercise 23: Area of a trapezoid.")
+base1I = input("Enter the length of the first base of the trapezoid: ")
+base2I = input("Enter the length of the second base of the trapezoid: ")
+heightI = input("Enter the height of the trapezoid: ")
+try:
+    base1 = float(base1I)
+    base2 = float(base2I)
+    height = float(heightI)
+    area = (base1+base2)*height/2
+    print("The area of the trapezoid is: ", area, "cm².", sep="")
+except:
+    error()
 
 
-print("\n\n Exercise 24: Area")
+print("\n\n Exercise 24: Area of a regular polygon.")
+sidesI = input("Enter the number of sides of the polygon: ")
+baseI = input("Enter the length of the base of the polygon: ")
+apothemI = input("Enter the length of the apothem of the polygon: ")
+try:
+    sides = float(sidesI)
+    base = float(baseI)
+    apothem = float(apothemI)
+    area = (sides*base*apothem)/2
+    print("The area of the polygon is: ", area, "cm².", sep="")
+except:
+    error()
 
-
-
-print("\n\n Exercise 25: Area")
-
+print("\n\n Exercise 25: Area of a circle.")
+radiusI = input("Enter the radius of the circle: ")
+try:
+    radius = float(radiusI)
+    area = math.pi*math.pow(radius,2)
+    print("The area of the circle is: ", area, "cm².", sep="")
+except:
+    error()
 
 
 print("\n\n Exercise 26: BMI calculating")
+weightI = input("Enter your weight in kg: ")
+heightI = input("Enter your height in meters: ")
+try:
+    weight = float(weightI)
+    height = float(heightI)
+    bmi = weight/(height*height)
+    print("Your BMI is: ", bmi, sep="")
+except:
+    error()
 
 
 
-print("\n\n Exercise 27: Equation square root")
-    
+print("\n\n Exercise 27: First-degree equation square root")
+print("The first-degree equation is in the form of ax+b=0.")
+aI = input("Enter the value of a: ")
+bI = input("Enter the value of b: ")
+try:
+    a = float(aI)
+    b = float(bI)
+    x = -b/a
+    print("The value of x is: ", x, sep="")
+except:
+    error()
 
 
 
