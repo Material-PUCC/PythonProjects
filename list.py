@@ -1,3 +1,4 @@
+import math
 def error():
     print("Invalid input. Please enter a number.")
     exit()
@@ -6,7 +7,7 @@ print("This program was developed by Davi Andrade Macedo.")
 print("I could do multiple files for this, but I'd rather do it all here.")
 
 
-print("\n\nExercise 1: °C to °F converter.")
+'''print("\n\nExercise 1: °C to °F converter.")
 
 CInput=input("Enter the temperature in °C: ")
 try:
@@ -129,7 +130,7 @@ try:
 except:
     error()
 
-print("\n\nExercise 13: Perimeter of a triangle")
+print("\n\nExercise 13: Perimeter of a triangle.")
 side1 = input("Enter the length of the first side: ")
 side2 = input("Enter the length of the second side: ")
 side3 = input("Enter the length of the third side: ")
@@ -142,7 +143,7 @@ try:
 except:
     error()
 
-print("\n\nExercise 14: Perimeter of a square")
+print("\n\nExercise 14: Perimeter of a square.")
 side = input("Enter the length of the side: ")
 try:
     side = float(side)
@@ -152,7 +153,7 @@ except:
     error()
 
 
-print("\n\nExercise 15: Perimeter of a rectangle")
+print("\n\nExercise 15: Perimeter of a rectangle.")
 length = input("Enter the length of the rectangle: ")
 width = input("Enter the width of the rectangle: ")
 try:
@@ -163,7 +164,7 @@ try:
 except:
     error()
 
-print("\n\nExercise 16: Area of a triangle")
+print("\n\nExercise 16: Area of a triangle.")
 base = input("Enter the length of the base: ")
 height = input("Enter the height of the triangle: ")
 try:
@@ -174,16 +175,67 @@ try:
 except:
     error()
 
-print("\n\nExercise 17: perimeter of a polygon")
+print("\n\nExercise 17: perimeter of a polygon.")
 sides = input("Enter the number of sides of the polygon: ")
 length = input("Enter the length of the side: ")
 try:
     sides = float(sides)
     length = float(length)
     perimeter = sides * length;
-    print("The perimeter of the polygon is: ", perimeter, sep="")
+    print("The perimeter of the polygon is: ", perimeter,"cm.", sep="")
 except:
     error()
+
+print("\n\nExercise 18: Area of a circle.")
+radiusI = input("Enter the radius of the circle: ")
+try:
+    radius = float(radiusI)
+    if (radius <= 0):
+        print("Radius can't be equal or below zero.")
+    perimeter = 2*math.pi*radius
+    print("The perimeter of the circle is: ", perimeter, "cm.", sep="")
+except:
+    error()
+
+print("\n\nExercise 19: Area of a triangle.")
+baseI = input("Enter the base value of the triangle: ")
+heightI = input("Enter the height value of the triangle: ")
+try:
+    base = float(baseI)
+    if(base <= 0):
+        print("Base can't be lower or equal to zero.")
+    height = float(heightI)
+    if(height <= 0):
+        print("Height can't be lower or equal to zero. ")
+    area = (base*height)/2
+    print("The area of the triangle is: ", area, "cm².", sep="")
+except:
+    error()'''
+
+print("\n\nExercise 20: Area of a square.")
+sideI = input("Enter the length of the side of the square: ")
+try:
+    side = float(sideI)
+    area = math.pow(side,2)
+    print("The area of the square is: ", area, "cm².", sep="")
+except:
+    error()
+
+print("\n\nExercise 21: Area of a rectangle.")
+side1I = input("Enter the length of the bigger side of the rectangle: ")
+side2I = input("Enter the length of the smaller side of the rectangle: ")
+try:
+    side1 = float(side1I)
+    side2 = float(side2I)
+    area = side1*side2
+    print("The area of the rectangle is: ", area, "cm².", sep="")
+except:
+    error()
+
+print("\n\n")
+
+    
+
 
 
 
