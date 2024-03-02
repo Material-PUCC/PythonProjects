@@ -174,7 +174,19 @@ try:
 except:
     error()
 
-print("\n\nExercise 17: Area of a square")
+print("\n\nExercise 17: perimeter of a polygon")
+sides = input("Enter the number of sides of the polygon: ")
+length = input("Enter the length of the side: ")
+try:
+    sides = float(sides)
+    length = float(length)
+    perimeter = sides * length;
+    print("The perimeter of the polygon is: ", perimeter, sep="")
+except:
+    error()
+
+
+
 
 
 
