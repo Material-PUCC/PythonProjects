@@ -232,8 +232,27 @@ try:
 except:
     error()
 
-print("\n\n")
+print("\n\nExercise 22: Area")
 
+
+
+
+print("\n\nExercise 23: Area")
+
+
+print("\n\n Exercise 24: Area")
+
+
+
+print("\n\n Exercise 25: Area")
+
+
+
+print("\n\n Exercise 26: BMI calculating")
+
+
+
+print("\n\n Exercise 27: Equation square root")
     
 
 
