@@ -5,8 +5,44 @@ def ValueErrorEx():
 def ZeroInputEx():
     print("Invalid input. Please enter a number different from zero.")
 
-print("This list was developed by Davi Andrade Macedo")
-#with great help from meid menid amei da but she's not in the same class :(
+def main():
+    print("This list was developed by Davi Andrade Macedo.")
+    desired = int(input("Enter the number of the exercise you want to execute (1-27): "))
+    #with great help from meid menid amei da but she's not in the same class :(
+    match desired:
+        case 1: ex1()
+        case 2: ex2()
+        case 3: ex3()
+        case 4: ex4()
+        case 5: ex5()
+        case 6: ex6()
+        case 7: ex7()
+        case 8: ex8()
+        case 9: ex9()
+        case 10: ex10()
+        case 11: ex11()
+        case 12: ex12()
+        case 13: ex13()
+        case 14: ex14()
+        case 15: ex15()
+        case 16: ex16()
+        case 17: ex17()
+        case 18: ex18()
+        case 19: ex19()
+        case 20: ex20()
+        case 21: ex21()
+        case 22: ex22()
+        case 23: ex23()
+        case 24: ex24()
+        case 25: ex25()
+        case 26: ex26()
+        case 27: ex27()
+        case _: print("Invalid number. Please enter a number between 1 and 27.")
+
+
+
+
+
 
 def ex1():
     print("\n\nExercise 1: °C to °F converter.")
@@ -480,3 +516,6 @@ def ex27():
             ZeroInputEx()
         except ValueError:
             ValueErrorEx()
+
+if __name__ == "__main__":
+    main()
