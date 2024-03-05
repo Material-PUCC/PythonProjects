@@ -5,6 +5,9 @@ def ValueErrorEx():
 def ZeroInputEx():
     print("Invalid input. Please enter a number different from zero.")
 
+print("This list was developed by Davi Andrade Macedo")
+#with great help from meid menid amei da but she's not in the same class :(
+
 def ex1():
     print("\n\nExercise 1: °C to °F converter.")
     while True:
@@ -313,6 +316,8 @@ def ex19():
             area = (base*height)/2
             print("The area of the triangle is: ", area, "cm².", sep="")
             break
+        except ValueError:
+            ValueErrorEx()
             
 
 def ex20():
@@ -370,105 +375,108 @@ def ex22():
         except ValueError:
             ValueErrorEx()
 
-print("\n\nExercise 23: Area of a trapezoid.")
-while True:
-    try:
-        base1I = input("\n\nEnter the length of the first base of the trapezoid: ")
-        base1 = float(base1I)
-        if (base1 <= 0):
-            print("Base can't be lower or equal to zero.")
-            continue
-        base2I = input("\n\nEnter the length of the second base of the trapezoid: ")
-        base2 = float(base2I)
-        if (base2 <= 0):
-            print("Base can't be lower or equal to zero.")
-            continue
-        heightI = input("\n\nEnter the height of the trapezoid: ")
-        height = float(heightI)
-        if (height <= 0):
-            print("Height can't be lower or equal to zero.")
-            continue     
-        area = (base1+base2)*height/2
-        print("The area of the trapezoid is: ", area, "cm².", sep="")
-        break
-    except:
-        ValueErrorEx()
+def ex23():
+    print("\n\nExercise 23: Area of a trapezoid.")
+    while True:
+        try:
+            base1 = input("\n\nEnter the length of the first base of the trapezoid: ")
+            base1 = float(base1)
+            if(base1 <= 0):
+                print("Base can't be lower or equal to zero.")
+                continue
+            base2 = input("\n\nEnter the length of the second base of the trapezoid: ")
+            base2 = float(base2)
+            if(base2 <= 0):
+                print("Base can't be lower or equal to zero.")
+                continue
+            height = input("\n\nEnter the height of the trapezoid: ")
+            height = float(height)
+            if(height <= 0):
+                print("Height can't be lower or equal to zero.")
+                continue
+            area = (base1+base2)*height/2
+            print("The area of the trapezoid is: ", area, "cm².", sep="")
+            break
+        except ValueError:
+            ValueErrorEx()
 
 
-print("\n\n Exercise 24: Area of a regular polygon.")
-while True:
-    try:
-        sidesI = input("\n\nEnter the number of sides of the polygon: ")
-        sides = float(sidesI)
-        if(sides < 3):
-            print("The number of sides must be greater than 2.")
-            continue
-        baseI = input("\n\nEnter the length of the base of the polygon: ")
-        base = float(baseI)
-        if (base <= 0):
-            print("Base can't be lower or equal to zero.")
-            continue
-        apothemI = input("\n\nEnter the length of the apothem of the polygon: ")
-        apothem = float(apothemI)
-        if (apothem <= 0):
-            print("Apothem can't be lower or equal to zero.")
-            continue
-        area = (sides*base*apothem)/2
-        print("The area of the polygon is: ", area, "cm².", sep="")
-        break
-    except:
-        ValueErrorEx()
+def ex24():
+    print("\n\n Exercise 24: Area of a regular polygon.")
+    while True:
+        try:
+            sidesI = input("\n\nEnter the number of sides of the polygon: ")
+            sides = float(sidesI)
+            if(sides < 3):
+                print("The number of sides must be greater than 2.")
+                continue
+            baseI = input("\n\nEnter the length of the base of the polygon: ")
+            base = float(baseI)
+            if (base <= 0):
+                print("Base can't be lower or equal to zero.")
+                continue
+            apothemI = input("\n\nEnter the length of the apothem of the polygon: ")
+            apothem = float(apothemI)
+            if (apothem <= 0):
+                print("Apothem can't be lower or equal to zero.")
+                continue
+            area = (sides*base*apothem)/2
+            print("The area of the polygon is: ", area, "cm².", sep="")
+            break
+        except:
+            ValueErrorEx()
 
-print("\n\n Exercise 25: Area of a circle.")
-while True:
-    try:
-        radiusI = input("\n\nEnter the radius of the circle: ")
-        radius = float(radiusI)
-        if (radius <= 0):
-            print("Radius can't be lower or equal to zero.")
-            continue
-        area = math.pi*math.pow(radius,2)
-        print("The area of the circle is: ", area, "cm².", sep="")
-        break
-    except:
-        ValueErrorEx()
+def ex25():
+    print("\n\n Exercise 25: Area of a circle.")
+    while True:
+        try:
+            radiusI = input("\n\nEnter the radius of the circle: ")
+            radius = float(radiusI)
+            if (radius <= 0):
+                print("Radius can't be lower or equal to zero.")
+                continue
+            area = math.pi*math.pow(radius,2)
+            print("The area of the circle is: ", area, "cm².", sep="")
+            break
+        except:
+            ValueErrorEx()
+
+def ex26():
+    print("\n\n Exercise 26: BMI calculating")
+    while True:
+        try:
+            weightI = input("\n\nEnter your weight in kg: ")
+            weight = float(weightI)
+            if(weight <= 0):
+                print("Weight can't be lower or equal to zero.")
+                continue
+            heightI = input("\n\nEnter your height in meters: ")
+            height = float(heightI)
+            if(height <= 0):
+                print("Height can't be lower or equal to zero.")
+                continue
+            bmi = weight/(height*height)
+            print("Your BMI is: ", bmi, sep="")
+            break
+        except ZeroDivisionError:
+            ValueErrorEx()
+        except ValueError:
+            ValueErrorEx()
 
 
-print("\n\n Exercise 26: BMI calculating")
-while True:
-    try:
-        weightI = input("\n\nEnter your weight in kg: ")
-        weight = float(weightI)
-        if(weight <= 0):
-            print("Weight can't be lower or equal to zero.")
-            continue
-        heightI = input("\n\nEnter your height in meters: ")
-        height = float(heightI)
-        if(height <= 0):
-            print("Height can't be lower or equal to zero.")
-            continue
-        bmi = weight/(height*height)
-        print("Your BMI is: ", bmi, sep="")
-        break
-    except ZeroDivisionError:
-        ValueErrorEx()
-    except ValueError:
-        ValueErrorEx()
-
-
-
-print("\n\n Exercise 27: First-degree equation square root")
-while True:
-    try:
-        print("The first-degree equation is in the form of ax+b=0.")
-        aI = input("\n\nEnter the value of a: ")
-        bI = input("\n\nEnter the value of b: ")
-        a = float(aI)
-        b = float(bI)
-        x = -b/a
-        print("The value of x is: ", x, sep="")
-        break
-    except ZeroDivisionError:
-        ZeroInputEx()
-    except ValueError:
-        ValueErrorEx()
+def ex27():
+    print("\n\n Exercise 27: First-degree equation square root")
+    while True:
+        try:
+            print("The first-degree equation is in the form of ax+b=0.")
+            aI = input("\n\nEnter the value of a: ")
+            bI = input("\n\nEnter the value of b: ")
+            a = float(aI)
+            b = float(bI)
+            x = -b/a
+            print("The value of x is: ", x, sep="")
+            break
+        except ZeroDivisionError:
+            ZeroInputEx()
+        except ValueError:
+            ValueErrorEx()
