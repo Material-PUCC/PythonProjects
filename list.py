@@ -39,11 +39,6 @@ def main():
         case 27: ex27()
         case _: print("Invalid number. Please enter a number between 1 and 27.")
 
-
-
-
-
-
 def ex1():
     print("\n\nExercise 1: °C to °F converter.")
     while True:
