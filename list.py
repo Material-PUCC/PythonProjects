@@ -98,8 +98,27 @@ def main():
         case 30: ex30()
         case 31: ex31()
         case 32: ex32()
+        case 33: ex33()
+        case 34: ex34()
+        case 35: ex35()
+        case 36: ex36()
+        case 37: ex37()
+        case 38: ex38()
+        case 39: ex39()
+        case 40: ex40()
+        case 41: ex41()
+        case 42: ex42()
+        case 43: ex43()
+        case 44: ex44()
+        case 45: ex45()
+        case 46: ex46()
+        case 47: ex47()
+        case 48: end()
         case _: print("Invalid number. Please enter a number between 1 and 27.")
 
+def end():
+    print("Thank you for using this program. Goodbye!")
+    exit()
 def ex1():
     print("\n\nExercise 1: °C to °F converter.")
     while True:
@@ -530,7 +549,7 @@ def ex23():
 
 
 def ex24():
-    print("\n\n Exercise 24: Area of a regular polygon.")
+    print("\n\nExercise 24: Area of a regular polygon.")
     while True:
         try:
             sidesI = input("\n\nEnter the number of sides of the polygon: ")
@@ -555,7 +574,7 @@ def ex24():
             ValueErrorEx()
 
 def ex25():
-    print("\n\n Exercise 25: Area of a circle.")
+    print("\n\nExercise 25: Area of a circle.")
     while True:
         try:
             radiusI = input("\n\nEnter the radius of the circle: ")
@@ -570,7 +589,7 @@ def ex25():
             ValueErrorEx()
 
 def ex26():
-    print("\n\n Exercise 26: BMI calculating")
+    print("\n\nExercise 26: BMI calculating")
     while True:
         try:
             weightI = input("\n\nEnter your weight in kg: ")
@@ -593,7 +612,7 @@ def ex26():
 
 
 def ex27():
-    print("\n\n Exercise 27: First-degree equation square root")
+    print("\n\nExercise 27: First-degree equation square root")
     while True:
         try:
             print("The first-degree equation is in the form of ax+b=0.")
@@ -610,7 +629,7 @@ def ex27():
             ValueErrorEx()
             
 def ex28():
-    print("\n\n Exercise 28: 1-12 Compilation")
+    print("\n\nExercise 28: 1-12 Compilation")
     print("This exercise is a compilation of exercises 1 to 12.")
     ex1()
     ex2()
@@ -626,7 +645,7 @@ def ex28():
     ex12()       
     
 def ex29():
-    print("\n\n Exercise 29: 13-18 Compilation")
+    print("\n\nExercise 29: 13-18 Compilation")
     print("This exercise is a compilation of exercises 13 to 18.")
     ex13()
     ex14()
@@ -636,7 +655,7 @@ def ex29():
     ex18()
     
 def ex30():
-    print("\n\n Exercise 30: 19-25 Compilation")        
+    print("\n\nExercise 30: 19-25 Compilation")        
     print("This exercise is a compilation of exercises 19 to 25.")
     ex19()
     ex20()
@@ -647,7 +666,7 @@ def ex30():
     ex25()
     
 def ex31():
-    print("\n\n Exercise 31: 2 numbers organized in ascending order")
+    print("\n\nExercise 31: 2 numbers organized in ascending order")
     while True:                 
         try:
             num1 = input("\n\nEnter the first number: ")
@@ -662,7 +681,7 @@ def ex31():
             ValueErrorEx()
             
 def ex32():
-    print("\n\n Exercise 32: 3 numbers organized in ascending order")
+    print("\n\nExercise 32: 3 numbers organized in ascending order")
     while True:
         try:
             num1 = input("\n\nEnter the first number: ")
@@ -685,6 +704,57 @@ def ex32():
                     print("The numbers in ascending order are: ", num1,num3,num2, ".", sep=" ")
                 else:
                     print("The numbers in ascending order are: ", num1,num2,num3, ".", sep=" ")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def ex33():
+    print("\n\nExercise 33: 4 numbers organized in ascending order")
+    while True:
+        try:
+            num1 = input("\n\nEnter the first number: ")
+            num1 = int(num1)
+            num2 = input("\n\nEnter the second number: ")
+            num2 = int(num2)
+            num3 = input("\n\nEnter the third number: ")
+            num3 = int(num3)
+            num4 = input("\n\nEnter the fourth number: ")
+            num4 = int(num4)
+            if(num1 > num2):
+                if(num2 > num3):
+                    if(num3 > num4):
+                        print("The numbers in ascending order are: ", num4,num3,num2,num1, ".", sep=" ")
+                    elif(num2 > num4):
+                        print("The numbers in ascending order are: ", num3,num4,num2,num1, ".", sep=" ")
+                    else:
+                        print("The numbers in ascending order are: ", num3,num2,num4,num1, ".", sep=" ")
+                elif(num1 > num3):
+                    print("The numbers in ascending order are: ", num2,num3,num1,num4, ".", sep=" ")
+                else:
+                    print("The numbers in ascending order are: ", num2,num1,num3,num4, ".", sep=" ")
+        except ValueError:
+            ValueErrorEx()
+
+def ex34(): 
+    print("\n\nExercise 34: Valid time check")
+    while True:
+        try:
+            hour = input("\n\nEnter the hour: ")
+            hour = int(hour)
+            if(hour < 0 or hour > 23):
+                print("Invalid hour. Please enter a valid hour.")
+                continue
+            minute = input("\n\nEnter the minute: ")
+            minute = int(minute)
+            if(minute < 0 or minute > 59):
+                print("Invalid minute. Please enter a valid minute.")
+                continue
+            second = input("\n\nEnter the second: ")
+            second = int(second)
+            if(second < 0 or second > 59):
+                print("Invalid second. Please enter a valid second.")
+                continue
+            print("The time is: ", hour, ":", minute, ":", second, ".", sep="")
             break
         except ValueError:
             ValueErrorEx()
