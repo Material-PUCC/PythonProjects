@@ -7,6 +7,8 @@ def ZeroInputEx():
 
 def main():
     print("This list was developed by Davi Andrade Macedo.")
+    print("Category 1: Temperature conversion.")
+    print("===================================")
     print("[1] °C to °F converter.")
     print("[2] °F to °C converter.")
     print("[3] °C to °K converter.")
@@ -19,6 +21,8 @@ def main():
     print("[10] °R to °F converter.")
     print("[11] °K to °R converter.")
     print("[12] °R to °K converter.")
+    print("Category 2: Perimeter and area of geometric figures.")
+    print("===================================")
     print("[13] Perimeter of a triangle.")
     print("[14] Perimeter of a square.")
     print("[15] Perimeter of a rectangle.")
@@ -32,9 +36,34 @@ def main():
     print("[23] Area of a trapezoid.")
     print("[24] Area of a regular polygon.")
     print("[25] Area of a circle.")
+    print("Category 3: Other calculations.")
+    print("===================================")
     print("[26] BMI calculating.")
     print("[27] First-degree equation square root.")
-    desired = int(input("Enter the number of the exercise you want to execute (1-27):  "))
+    print("[28] 1-12 Compilation.")
+    print("[29] 13-18 Compilation.")
+    print("[30] 19-25 Compilation.")
+    print("[31] 2 numbers organized in ascending order.")
+    print("[32] 3 numbers organized in ascending order.")
+    print("[33] 4 numbers organized in ascending order.")
+    print("[34] Valid time check.")
+    print("[35] Check valid triangle sides.")
+    print("[36] Check valid triangle sides and type.")
+    print("[37] Check valid triangle by angles.")
+    print("[38] Check valid triangle by angles and type.")
+    print("[39] Second-degree equation square root.")
+    print("[40] Valid date and year check.")
+    print("[41] Natural number up to 9 written in words.")
+    print("[42] Natural number between -9 and 9 written in words.")
+    print("[43] Natural number between -99 and 99 written in words.")
+    print("[44] Natural number between -999 and 999 written in words.")
+    print("[45] Monetary value between -9,99 R$ and 9,99 R$ written in words.")
+    print("[46] Monetary value between -99,99 R$ and 99,99 R$ written in words.")
+    print("[47] Monetary value between -999,99 R$ and 999,99 R$ written in words.")
+    print("[48] Exit.")
+    
+    
+    desired = int(input("Enter the number of the exercise you want to execute (1-48):  "))
     #with great help from meid menid amei da but she's not in the same class :(
     match desired:
         case 1: ex1()
@@ -64,6 +93,11 @@ def main():
         case 25: ex25()
         case 26: ex26()
         case 27: ex27()
+        case 28: ex28()
+        case 29: ex29()
+        case 30: ex30()
+        case 31: ex31()
+        case 32: ex32()
         case _: print("Invalid number. Please enter a number between 1 and 27.")
 
 def ex1():
@@ -538,6 +572,87 @@ def ex27():
             ZeroInputEx()
         except ValueError:
             ValueErrorEx()
+            
+def ex28():
+    print("\n\n Exercise 28: 1-12 Compilation")
+    print("This exercise is a compilation of exercises 1 to 12.")
+    ex1()
+    ex2()
+    ex3()
+    ex4()
+    ex5()
+    ex6()
+    ex7()
+    ex8()
+    ex9()
+    ex10()
+    ex11()
+    ex12()       
+    
+def ex29():
+    print("\n\n Exercise 29: 13-18 Compilation")
+    print("This exercise is a compilation of exercises 13 to 18.")
+    ex13()
+    ex14()
+    ex15()
+    ex16()
+    ex17()
+    ex18()
+    
+def ex30():
+    print("\n\n Exercise 30: 19-25 Compilation")        
+    print("This exercise is a compilation of exercises 19 to 25.")
+    ex19()
+    ex20()
+    ex21()
+    ex22()
+    ex23()
+    ex24()
+    ex25()
+    
+def ex31():
+    print("\n\n Exercise 31: 2 numbers organized in ascending order")
+    while True:                 
+        try:
+            num1 = input("\n\nEnter the first number: ")
+            num1 = float(num1)
+            num2 = input("\n\nEnter the second number: ")
+            num2 = float(num2)
+            if(num1 > num2):
+                print("The numbers in ascending order are: ", num2,num1, ".", sep="")
+            else: 
+                print("The numbers in ascending order are: ", num1,num2, ".", sep="")
+        except ValueError:
+            ValueErrorEx()
+            
+def ex32():
+    print("\n\n Exercise 32: 3 numbers organized in ascending order")
+    while True:
+        try:
+            num1 = input("\n\nEnter the first number: ")
+            num1 = float(num1)
+            num2 = input("\n\nEnter the second number: ")
+            num2 = float(num2)
+            num3 = input("\n\nEnter the third number: ")
+            num3 = float(num3)
+            if(num1 > num2):
+                if(num2 > num3):
+                    print("The numbers in ascending order are: ", num3,num2,num1, ".", sep="")
+                elif(num1 > num3):
+                    print("The numbers in ascending order are: ", num2,num3,num1, ".", sep="")
+                else:
+                    print("The numbers in ascending order are: ", num2,num1,num3, ".", sep="")
+            else:
+                if(num1 > num3):
+                    print("The numbers in ascending order are: ", num3,num1,num2, ".", sep="")
+                elif(num2 > num3):
+                    print("The numbers in ascending order are: ", num1,num3,num2, ".", sep="")
+                else:
+                    print("The numbers in ascending order are: ", num1,num2,num3, ".", sep="")
+            break
+        except ValueError:
+            ValueErrorEx()
+    
 
 if __name__ == "__main__":
     main()
