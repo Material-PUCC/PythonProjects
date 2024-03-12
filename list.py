@@ -878,6 +878,69 @@ def ex38():
             break
         except ValueError:
             ValueErrorEx()
+            
+def ex39():
+    print("\n\nExercise 39: Second-degree equation square root")
+    while True:
+        try:
+            print("The second-degree equation is in the form of ax²+bx+c=0.")
+            aI = input("\n\nEnter the value of a: ")
+            a = float(aI)
+            bI = input("\n\nEnter the value of b: ")
+            b = float(bI)
+            cI = input("\n\nEnter the value of c: ")
+            c = float(cI)
+            delta = b**2 - 4*a*c
+            if(delta < 0):
+                print("The equation has no roots.")
+            elif(delta == 0):
+                x = -b/(2*a)
+                print("The equation has one root: ", x, sep="")
+            else:
+                x1 = (-b + math.sqrt(delta))/(2*a)
+                x2 = (-b - math.sqrt(delta))/(2*a)
+                print("The equation has two roots: ", x1, " and ", x2, ".", sep="")
+            break
+        except: 
+            ValueErrorEx()
+
+def ex40():
+    print("\n\nExercise 40: Valid date and year check")
+    while True:
+        try:
+            day = input("\n\nEnter the day: ")
+            day = int(day)
+            if(day < 1 or day > 31):
+                print("Invalid day. Please enter a valid day.")
+                continue
+            month = input("\n\nEnter the month: ")
+            month = int(month)
+            if(month < 1 or month > 12):
+                print("Invalid month. Please enter a valid month.")
+                continue
+            year = input("\n\nEnter the year: ")
+            year = int(year)
+            if(year < -45):
+                print("Invalid year. Please enter a valid year.")
+                continue
+            if (month == 2):
+                if (year%4 == 0 and year%100 != 0) or (year%400 == 0):
+                    if(day > 29):
+                        print("Invalid day. Please enter a valid day.")
+                        continue
+                else:
+                    if(day > 28):
+                        print("Invalid day. Please enter a valid day.")
+                        continue
+            elif(month == 4 or month == 6 or month == 9 or month == 11):
+                if(day > 30):
+                    print("Invalid day. Please enter a valid day.")
+                    continue
+          
+            
+            
+        except ValueError:
+            ValueErrorEx()    
     
         
     
