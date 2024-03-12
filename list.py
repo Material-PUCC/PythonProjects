@@ -1,6 +1,6 @@
 import math
 def ValueErrorEx():
-    print("Invalid input. Please enter a number.")
+    print("Invalid input. Please enter a  valid number.")
 
 def ZeroInputEx():
     print("Invalid input. Please enter a number different from zero.")
@@ -106,6 +106,9 @@ def ex1():
         CInput=input("\n\nEnter the temperature in °C: ")
         try:
             CTemp = float(CInput);
+            if (CTemp < -273.15):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             FTemp = 9*CTemp/5+32
             print("The temperature in °F is: ", FTemp, sep="")
             break
@@ -118,6 +121,9 @@ def ex2():
         FInput = input("\n\nEnter the temperature in °F: ")
         try:
             FTemp = float(FInput)
+            if (FTemp < -459.67):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             CTemp = (FTemp-32)*5/9
             print("The temperature in °C is: ", CTemp, sep="")
             break   
@@ -130,6 +136,9 @@ def ex3():
         CInput = input("\n\nEnter the temperature in °C: ")
         try:
             CTemp = float(CInput)
+            if (CTemp < -273.15):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             KTemp = CTemp + 273.15
             print("The temperature in °K is: ", KTemp, sep="")
             break
@@ -142,6 +151,9 @@ def ex4():
         KInput = input("\n\nEnter the temperature in °K: ")
         try:
             KTemp = float(KInput)
+            if (KTemp < 0):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             CTemp = KTemp - 273.15
             print("The temperature in °C is: ", CTemp, sep="")
             break
@@ -154,6 +166,9 @@ def ex5():
         CInput = input("\n\nEnter the temperature in °C: ")
         try:
             CTemp = float(CInput)
+            if (CTemp < -273.15):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             RTemp = CTemp*9/5 + 491.67
             print("The temperature in °R is: ", RTemp, sep="")
             break
@@ -166,6 +181,9 @@ def ex6():
         RInput = input("\n\nEnter the temperature in °R: ")
         try:
             RTemp = float(RInput)
+            if (RTemp < 0):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             CTemp = (RTemp - 491.67)/1.8
             print("The temperature in °C is: ", CTemp, sep="")
             break
@@ -178,6 +196,9 @@ def ex7():
         FInput = input("\n\nEnter the temperature in °F: ")
         try:
             FTemp = float(FInput)
+            if (FTemp < -459.67):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             CTemp = (FTemp-32)*5/9
             KTemp = CTemp + 273.15
             print("The temperature in °K is: ", KTemp, sep="")
@@ -191,6 +212,9 @@ def ex8():
         KInput = input("\n\nEnter the temperature in °K: ")
         try:
             KTemp = float(KInput)
+            if (KTemp < 0):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             CTemp = KTemp - 273.15
             FTemp = 9*CTemp/5+32
             print("The temperature in °F is: ", FTemp, sep="")  
@@ -204,6 +228,9 @@ def ex9():
         FInput = input("\n\nEnter the temperature in °F: ")
         try:
             FTemp = float(FInput)
+            if (FTemp < -459.67):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             CTemp = (FTemp-32)*5/9
             RTemp = CTemp*9/5 + 491.67
             print("The temperature in °R is: ", RTemp, sep="")
@@ -217,6 +244,9 @@ def ex10():
         RInput = input("\n\nEnter the temperature in °R: ")
         try:
             RTemp = float(RInput)
+            if (RTemp < 0):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             CTemp = (RTemp - 491.67)/1.8
             FTemp = RTemp - 459.67  
             print("The temperature in °F is: ", FTemp, sep="")
@@ -230,6 +260,9 @@ def ex11():
         KInput = input("\n\nEnter the temperature in °K: ")
         try:
             KTemp = float(KInput)
+            if (KTemp < 0):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             CTemp = KTemp - 273.15
             RTemp = CTemp*9/5 + 491.67
             print("The temperature in °R is: ", RTemp, sep="")
@@ -243,6 +276,9 @@ def ex12():
         RInput = input("\n\nEnter the temperature in °R: ")
         try:
             RTemp = float(RInput)
+            if (RTemp < 0):
+                print("\n\nTemperatures below absolute zero are not valid. Please input a correct value.")
+                continue
             CTemp = (RTemp - 491.67)/1.8
             KTemp = CTemp + 273.15
             print("The temperature in °K is: ", KTemp, sep="")
@@ -630,25 +666,25 @@ def ex32():
     while True:
         try:
             num1 = input("\n\nEnter the first number: ")
-            num1 = float(num1)
+            num1 = int(num1)
             num2 = input("\n\nEnter the second number: ")
-            num2 = float(num2)
+            num2 = int(num2)
             num3 = input("\n\nEnter the third number: ")
-            num3 = float(num3)
+            num3 = int(num3)
             if(num1 > num2):
                 if(num2 > num3):
-                    print("The numbers in ascending order are: ", num3,num2,num1, ".", sep="")
+                    print("The numbers in ascending order are: ", num3,num2,num1, ".", sep=" ")
                 elif(num1 > num3):
-                    print("The numbers in ascending order are: ", num2,num3,num1, ".", sep="")
+                    print("The numbers in ascending order are: ", num2,num3,num1, ".", sep=" ")
                 else:
-                    print("The numbers in ascending order are: ", num2,num1,num3, ".", sep="")
+                    print("The numbers in ascending order are: ", num2, num1, num3, ".", sep=" ")
             else:
                 if(num1 > num3):
-                    print("The numbers in ascending order are: ", num3,num1,num2, ".", sep="")
+                    print("The numbers in ascending order are: ", num3,num1,num2, ".", sep=" ")
                 elif(num2 > num3):
-                    print("The numbers in ascending order are: ", num1,num3,num2, ".", sep="")
+                    print("The numbers in ascending order are: ", num1,num3,num2, ".", sep=" ")
                 else:
-                    print("The numbers in ascending order are: ", num1,num2,num3, ".", sep="")
+                    print("The numbers in ascending order are: ", num1,num2,num3, ".", sep=" ")
             break
         except ValueError:
             ValueErrorEx()
