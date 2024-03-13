@@ -907,45 +907,62 @@ def ex39():
 def ex40():
     print("\n\nExercise 40: Valid date and year check")
     while True:
-        try:
-            day = input("\n\nEnter the day: ")
-            day = int(day)
-            if(day < 1 or day > 31):
-                print("Invalid day. Please enter a valid day.")
+        #try:
+            year = int(input("\n\nEnter a year: "))
+            if (year == 0 or year < -45):
+                print("\n\nInvalid input. Enter a valid year.")
                 continue
-            month = input("\n\nEnter the month: ")
-            month = int(month)
-            if(month < 1 or month > 12):
-                print("Invalid month. Please enter a valid month.")
-                continue
-            year = input("\n\nEnter the year: ")
-            year = int(year)
-            if(year < -45):
-                print("Invalid year. Please enter a valid year.")
-                continue
-            if (month == 2):
-                if (year%4 == 0 and year%100 != 0) or (year%400 == 0):
-                    if(day > 29):
-                        print("Invalid day. Please enter a valid day.")
-                        continue
+            else:
+                if (year < 1583):
+                    if (year%4 == 0):
+                        leapY = True
+                    else:
+                        leapY = False
                 else:
-                    if(day > 28):
-                        print("Invalid day. Please enter a valid day.")
-                        continue
-            elif(month == 4 or month == 6 or month == 9 or month == 11):
-                if(day > 30):
-                    print("Invalid day. Please enter a valid day.")
-                    continue
-          
-            
-            
-        except ValueError:
-            ValueErrorEx()    
-    
-        
-    
-    
-    
+                    if(year%400 == 0):
+                        leapY = True
+                    else: 
+                        leapY = False              
+            month = int(input("\n\nEnter a month: "))
+            if (month < 1 or month > 12):
+                print("\n\nInvalid input. Enter a valid month.")
+                continue
+            match month:
+                    case "1", "3", "5", "7", "8", "10", "12":
+                        print("oi")
+                        day = int(input("\n\nEnter a day: "))
+                        
+                        if (day < 1 or day > 31):
+                            print("Invalid input. Enter a valid day.")
+                            continue
+                        elif(day >= 5 and day <= 14 and month == 10 and year == 1582):
+                            print("This day does not exist.")
+                            continue
+                        else:
+                            print("The date is: ", day, "/", month, "/", year, ".", sep="")
+                            continue
+                    case "4", "6", "9", "11":
+                        print("oi")
+                        day = int(input("\n\nEnter a day: "))
+                        if (day < 1 or day > 30):
+                            print("\n\nInvalid input. Enter a valid day.")
+                            continue
+                    case "2":
+                        if (leapY):
+                            if(day <1 or day > 29):
+                                print("\n\nInvalid input. Enter a valid day.")
+                        else: 
+                            if (day == 29):
+                                print("\n\nInvalid input. Enter a valid day.")
 
+                
+                
+               
+                
+
+                        
+                 
+                     
+                
 if __name__ == "__main__":
     main()
