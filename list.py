@@ -1,6 +1,5 @@
-import math
-import temp
-import geometry
+import math, temp, geometry, time, datetime
+from num2words import num2words
 def ValueErrorEx():
     print("Invalid input. Please enter a  valid number.")
 
@@ -439,66 +438,148 @@ def ex39():
             ValueErrorEx()
 
 def ex40():
-
     print("\n\nExercise 40: Valid date and year check")
     while True:
-            year = int(input("\n\nEnter a year: "))
-            month = int(input("\n\nEnter a month: "))
-            day = int(input("\n\nEnter a day: "))
-            if (year == 0 or year < -45):
-                print("\n\nInvalid input. Enter a valid year.")
+        try:
+            day = input("\n\nEnter the day: ")
+            day = int(day)
+            if (day < 1 or day > 31):
+                print("Invalid input. Please enter a valid day.")
                 continue
-            else:
-                if (year < 1583):
-                    if (year%4 == 0):
-                        leapY = True
-                    else:
-                        leapY = False
-                else:
-                    if(year%400 == 0):
-                        leapY = True
-                    else: 
-                        leapY = False              
-            
+            month = input("\n\nEnter the month: ")
+            month = int(month)
             if (month < 1 or month > 12):
-                print("\n\nInvalid input. Enter a valid month.")
+                print("Invalid input. Please enter a valid month.")
                 continue
-            else:
-                print("Date:", day, "/", month, "/", year) 
-              
-                match month:
-                    case 10:
-                        
-                        
-                        if (day < 1 or day > 31):
-                            print("Invalid input. Enter a valid day.")
+            year = input("\n\nEnter the year: ")
+            year = int(year)
+            if (year == 0 or year > 9999 or year < -45):
+                print("Invalid input. Please enter a valid year.")
+                continue
+            match month:
+                case 2:
+                    if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+                        if (day > 29):
+                            print("Invalid input. Please enter a valid day.")
                             continue
-                        elif(day >= 5 and day <= 14 and month == 10 and year == 1582):
-                            print("This day does not exist.")
+                    else:
+                        if (day > 28):
+                            print("Invalid input. Please enter a valid day.")
                             continue
-                        else:
-                            print("The date is: ", day, "/", month, "/", year, ".", sep="")
-                            continue
-                        
-                    case 4, 6, 9, 11:
-                        print("oi")
-                        day = int(input("\n\nEnter a day: "))
-                        if (day < 1 or day > 30):
-                            print("\n\nInvalid input. Enter a valid day.")
-                            continue
-                    case 2:
-                        if (leapY):
-                            if(day <1 or day > 29):
-                                print("\n\nInvalid input. Enter a valid day.")
-                        else: 
-                            if (day == 29):
-                                print("\n\nInvalid input. Enter a valid day.")
-                                continue
-                            else:
-                                print("The date is: ", day, "/", month, "/", year, ".", sep="")
-                                continue
-                        print("The date is: ", day, "/", month, "/", year, ".", sep="")
+                case 4, 6, 9, 11:
+                    if (day > 30):
+                        print("Invalid input. Please enter a valid day.")
+                        continue
+                case 10:
+                    if (day >= 5 and day <= 14 and year == 1582):
+                        print("Invalid input. This day does not exist.")
+                        continue
+            print("The date is: ", day, "/", month, "/", year, ".", sep="")
             break
+        except ValueError:
+            ValueErrorEx()
 
+def ex41():
+    print("\n\nExercise 41: Natural number up to 9 written in words")
+    while True:
+        try:
+            num = input("\n\nEnter a number between 0 and 9: ")
+            num = int(num)
+            if(num <= 0 or num > 9):
+                print("Invalid input. Please enter a number between 0 and 9.")
+                continue
+            print("Your number is ", num2words(num), "!")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def ex42():
+    print("\n\nExercise 41: Natural number from -9 to 9 written in words")
+    while True:
+        try:
+            num = input("\n\nEnter a number between 0 and 9: ")
+            num = int(num)
+            if(num < -9 or num > 9):
+                print("Invalid input. Please enter a number between 0 and 9.")
+                continue
+            print("Your number is ", num2words(num), "!")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def ex43():
+    print("\n\nExercise 43: Natural number from -999 to 999 written in words")
+    while True:
+        try:
+            num = input("\n\nEnter a number between -999 and 999: ")
+            num = int(num)
+            if(num < -99 or num > 99):
+                print("Invalid input. Please enter a number between -999 and 999.")
+                continue
+            print("Your number is ", num2words(num), "!")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def ex44():
+    print("\n\nExercise 44: Natural number from -999 to 999 written in words")
+    while True:
+        try:
+            num = input("\n\nEnter a number between -999 and 999: ")
+            num = int(num)
+            if(num < -999 or num > 999):
+                print("Invalid input. Please enter a number between -999 and 999.")
+                continue
+            print("Your number is ", num2words(num), "!")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def ex45():
+    print("\n\nExercise 45: Monetary value between R$-9.99 and R$9.99 written in words")
+    while True:
+        try:
+            num = input("\n\nEnter a value between R$-9.99 and R$9.99: ")
+            num = float(num)
+            if(num < -9.99 or num > 9.99):
+                print("Invalid input. Please enter a number between R$-9.99 and R$9.99.")
+                continue
+            print("Your number is ", num2words(num, to = 'currency', lang='pt_BR'))
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def ex46():
+    print("\n\nExercise 46: Monetary value between R$-99.99 and R$99.99 written in words")
+    while True:
+        try:
+            num = input("\n\nEnter a value between R$-99.99 and R$99.99: ")
+            num = float(num)
+            if(num < -99.99 or num > 99.99):
+                print("Invalid input. Please enter a number between R$-99.99 and R$99.99.")
+                continue
+            print("Your number is ", num2words(num, to = 'currency', lang='pt_BR'))
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def ex47():
+    print("\n\nExercise 47: Monetary value between R$-999.99 and R$999.99 written in words")
+    while True:
+        try:
+            num = input("\n\nEnter a value between R$-999.99 and R$999.99: ")
+            num = float(num)
+            if(num < -999.99 or num > 999.99):
+                print("Invalid input. Please enter a number between R$-999.99 and R$999.99.")
+                continue
+            print("Your number is", num2words(num, to = 'currency', lang = 'pt_BR'))
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def ex48():
+    print("\n\nExercise 48: Exit")
+    end()
+    
 if __name__ == "__main__":
     main()
