@@ -494,7 +494,7 @@ def ex41():
             ValueErrorEx()
 
 def ex42():
-    print("\n\nExercise 41: Natural number from -9 to 9 written in words")
+    print("\n\nExercise 42: Natural number from -9 to 9 written in words")
     while True:
         try:
             num = input("\n\nEnter a number between 0 and 9: ")
