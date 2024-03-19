@@ -1,7 +1,4 @@
-import math
-import list
-
-
+import math, main
 def ex1():
     print("\n\nExercise 1: °C to °F converter.")
     while True:

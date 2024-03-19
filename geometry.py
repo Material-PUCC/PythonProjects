@@ -1,5 +1,4 @@
 import math
-import list
 
 def ex13():
     print("\n\nExercise 13: Perimeter of a triangle.")

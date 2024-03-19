@@ -1,0 +1,37 @@
+import temp, geometry, main
+def ex28():
+    print("\n\nExercise 28: 1-12 Compilation")
+    print("This exercise is a compilation of exercises 1 to 12.")
+    temp.ex1()
+    temp.ex2()
+    temp.ex3()
+    temp.ex4()
+    temp.ex5()
+    temp.ex6()
+    temp.ex7()
+    temp.ex8()
+    temp.ex9()
+    temp.ex10()
+    temp.ex11()
+    temp.ex12()       
+    
+def ex29():
+    print("\n\nExercise 29: 13-18 Compilation")
+    print("This exercise is a compilation of exercises 13 to 18.")
+    geometry.ex13()
+    geometry.ex14()
+    geometry.ex15()
+    geometry.ex16()
+    geometry.ex17()
+    geometry.ex18()
+    
+def ex30():
+    print("\n\nExercise 30: 19-25 Compilation")        
+    print("This exercise is a compilation of exercises 19 to 25.")
+    geometry.ex19()
+    geometry.ex20()
+    geometry.ex21()
+    geometry.ex22()
+    geometry.ex23()
+    geometry.ex24()
+    geometry.ex25()
