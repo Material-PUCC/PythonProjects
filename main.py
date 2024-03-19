@@ -56,7 +56,7 @@ def seeRepo():
     main()
 
 def prointer():
-    webbrowser.open("https://bigrat.monster/printer")
+    webbrowser.open_new("https://bigrat.monster/printer")
     cls()
     main()
     
