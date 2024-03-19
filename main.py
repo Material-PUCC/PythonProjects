@@ -1,141 +1,234 @@
-import math, temp, geometry, time, datetime, combos, order, date, number2words
+import math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser
 from num2words import num2words
 def ValueErrorEx():
-    print("Invalid input. Please enter a  valid number.")
+    print("Invalid input. Please enter a valid number.")
 
 def ZeroInputEx():
     print("Invalid input. Please enter a number different from zero.")
 
+def Cat1():
+    while True:
+        try:
+
+            print("Select the exercise you want to execute.")
+            print("[1] °C to °F converter.")
+            print("[2] °F to °C converter.")
+            print("[3] °C to °K converter.")
+            print("[4] °K to °C converter.")
+            print("[5] °C to °R converter.")
+            print("[6] °R to °C converter.")
+            print("[7] °F to °K converter.")
+            print("[8] °K to °F converter.")
+            print("[9] °F to °R converter.")
+            print("[10] °R to °F converter.")
+            print("[11] °K to °R converter.")
+            print("[12] °R to °K converter.")
+            desired = int(input("Enter the number of the exercise you want to run from the above:  "))
+            match desired:
+                case 1: temp.ex1()
+                case 2: temp.ex2()
+                case 3: temp.ex3()
+                case 4: temp.ex4()
+                case 5: temp.ex5()
+                case 6: temp.ex6()
+                case 7: temp.ex7()
+                case 8: temp.ex8()
+                case 9: temp.ex9()
+                case 10: temp.ex10()
+                case 11: temp.ex11()
+                case 12: temp.ex12()
+                case _: print("Invalid entry. Please enter a valid number.")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def Cat2():
+    while True:
+        try:          
+            print("Select the exercise you want to execute.")
+            print("[13] Perimeter of a triangle.")
+            print("[14] Perimeter of a square.")
+            print("[15] Perimeter of a rectangle.")
+            print("[16] Perimeter of a trapezoid.")
+            print("[17] Area of a regular polygon.")
+            print("[18] Perimeter of a circle.")
+            print("[19] Area of a triangle.")
+            print("[20] Area of a square.")
+            print("[21] Area of a rectangle.")
+            print("[22] Area of a diamond.")
+            print("[23] Area of a trapezoid.")
+            print("[24] Area of a regular polygon.")
+            print("[25] Area of a circle.")
+            print("[35] Check valid triangle sides.")
+            print("[36] Check valid triangle sides and type.")
+            print("[37] Check valid triangle by angles.")
+            print("[38] Check valid triangle by angles and type.")
+            desired = int(input("Enter the number of the exercise you want to run from the above:  "))
+            match desired:
+                case 13: geometry.ex13()
+                case 14: geometry.ex14()
+                case 15: geometry.ex15()
+                case 16: geometry.ex16()
+                case 17: geometry.ex17()
+                case 18: geometry.ex18()
+                case 19: geometry.ex19()
+                case 20: geometry.ex20()
+                case 21: geometry.ex21()
+                case 22: geometry.ex22()
+                case 23: geometry.ex23()
+                case 24: geometry.ex24()
+                case 25: geometry.ex25()
+                case 35: order.ex35()
+                case 36: order.ex36()
+                case 37: order.ex37()
+                case 38: order.ex38()
+                case _: print("Invalid entry. Please enter a valid number.")
+            break
+        except ValueError:
+            ValueErrorEx()
+    
+def Cat3():
+    while True:
+        try:
+            print("Select the exercise you want to execute.")
+            print("[26] BMI calculating.")
+            print("[27] First-degree equation square root.")
+            print("[39] Second-degree equation square root.")
+            desired = int(input("Enter the number of the exercise you want to run from the above:  "))
+            match desired:
+                case 26: ex26()
+                case 27: ex27()
+                case 39: ex39()
+                case _: print("Invalid entry. Please enter a valid number.")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def Cat4():
+    while True:
+        try:
+            print("Select the exercise you want to execute.")
+            print("[28] 1-12 Compilation.")
+            print("[29] 13-18 Compilation.")
+            print("[30] 19-25 Compilation.")
+            desired = int(input("Enter the number of the exercise you want to run from the above:  "))
+            match desired:
+                case 28: combos.ex28()
+                case 29: combos.ex29()
+                case 30: combos.ex30()
+                case _: print("Invalid entry. Please enter a valid number.")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def Cat5():
+    while True:
+        try:
+            print("Select the exercise you want to execute.")
+            print("[31] Ascending order of 3 numbers.")
+            print("[32] Ascending order of 4 numbers.")
+            print("[33] Ascending order of 5 numbers.")
+            desired = int(input("Enter the number of the exercise you want to run from the above:  "))
+            match desired:
+                case 31: order.ex31()
+                case 32: order.ex32()
+                case 33: order.ex33()
+                case _: print("Invalid entry. Please enter a valid number.")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def Cat6():
+    while True:
+        try:
+            print("Select the exercise you want to execute.")
+            print("[34] Valid time check.")
+            print("[40] Valid date and year check.")
+            desired = int(input("Enter the number of the exercise you want to run from the above:  "))
+            match desired:
+                case 34: date.ex34()
+                case 40: date.ex40()
+                case _: print("Invalid entry. Please enter a valid number.")
+            break
+        except ValueError:
+            ValueErrorEx()
+
+def Cat7():
+    while True:
+        try:
+
+            print("Select the exercise you want to execute.")
+            print("[41] Number to words.")
+            print("[42] Number to words with currency.")
+            print("[43] Number to words with ordinal.")
+            print("[44] Number to words with ordinal and currency.")
+            print("[45] Number to words with ordinal and currency.")
+            print("[46] Number to words with ordinal and currency.")
+            print("[47] Number to words with ordinal and currency.")
+            desired = int(input("Enter the number of the exercise you want to run from the above:  "))
+            match desired:
+                case 41: number2words.ex41()
+                case 42: number2words.ex42()
+                case 43: number2words.ex43()
+                case 44: number2words.ex44()
+                case 45: number2words.ex45()
+                case 46: number2words.ex46()
+                case 47: number2words.ex47()
+                case _: print("Invalid entry. Please enter a valid number.")
+        except ValueError:
+            ValueErrorEx()
+
 def main():
-    print("This list was developed by Davi Andrade Macedo.")
-    print("Category 1: Temperature conversion.")
-    print("===================================")
-    print("[1] °C to °F converter.")
-    print("[2] °F to °C converter.")
-    print("[3] °C to °K converter.")
-    print("[4] °K to °C converter.")
-    print("[5] °C to °R converter.")
-    print("[6] °R to °C converter.")
-    print("[7] °F to °K converter.")
-    print("[8] °K to °F converter.")
-    print("[9] °F to °R converter.")
-    print("[10] °R to °F converter.")
-    print("[11] °K to °R converter.")
-    print("[12] °R to °K converter.")
-    print("Category 2: Perimeter and area of geometric figures.")
-    print("===================================")
-    print("[13] Perimeter of a triangle.")
-    print("[14] Perimeter of a square.")
-    print("[15] Perimeter of a rectangle.")
-    print("[16] Perimeter of a trapezoid.")
-    print("[17] Area of a regular polygon.")
-    print("[18] Perimeter of a circle.")
-    print("[19] Area of a triangle.")
-    print("[20] Area of a square.")
-    print("[21] Area of a rectangle.")
-    print("[22] Area of a diamond.")
-    print("[23] Area of a trapezoid.")
-    print("[24] Area of a regular polygon.")
-    print("[25] Area of a circle.")
-    print("[35] Check valid triangle sides.")
-    print("[36] Check valid triangle sides and type.")
-    print("[37] Check valid triangle by angles.")
-    print("[38] Check valid triangle by angles and type.")
-    print("Category 3: Other calculations.")
-    print("===================================")
-    print("[26] BMI calculating.")
-    print("[27] First-degree equation square root.")
-    print("[39] Second-degree equation square root.")
-    print("Category 4: Compilations.")
-    print("===================================")
-    print("[28] 1-12 Compilation.")
-    print("[29] 13-18 Compilation.")
-    print("[30] 19-25 Compilation.")
-    print("Category 5: Order.")
-    print("===================================")
-    print("[31] 2 numbers organized in ascending order.")
-    print("[32] 3 numbers organized in ascending order.")
-    print("[33] 4 numbers organized in ascending order.")
-    print("Category 6: Date and time.")
-    print("===================================")
-    print("[34] Valid time check.")
-    print("[40] Valid date and year check.")
-    print("===================================")
-    print("Category 7: Number to words.")
-    print("===================================")
-    print("[41] Natural number up to 9 written in words.")
-    print("[42] Natural number between -9 and 9 written in words.")
-    print("[43] Natural number between -99 and 99 written in words.")
-    print("[44] Natural number between -999 and 999 written in words.")
-    print("[45] Monetary value between -9,99 R$ and 9,99 R$ written in words.")
-    print("[46] Monetary value between -99,99 R$ and 99,99 R$ written in words.")
-    print("[47] Monetary value between -999,99 R$ and 999,99 R$ written in words.")
-    print("[48] Exit.")
-    
-    
-    desired = int(input("Enter the number of the exercise you want to execute (1-48):  "))
-    #with great help from meid menid amei da but she's not in the same class :(
-    match desired:
-        case 1: temp.ex1()
-        case 2: temp.ex2()
-        case 3: temp.ex3()
-        case 4: temp.ex4()
-        case 5: temp.ex5()
-        case 6: temp.ex6()
-        case 7: temp.ex7()
-        case 8: temp.ex8()
-        case 9: temp.ex9()
-        case 10: temp.ex10()
-        case 11: temp.ex11()
-        case 12: temp.ex12()
-        case 13: geometry.ex13()
-        case 14: geometry.ex14()
-        case 15: geometry.ex15()
-        case 16: geometry.ex16()
-        case 17: geometry.ex17()
-        case 18: geometry.ex18()
-        case 19: geometry.ex19()
-        case 20: geometry.ex20()
-        case 21: geometry.ex21()
-        case 22: geometry.ex22()
-        case 23: geometry.ex23()
-        case 24: geometry.ex24()
-        case 25: geometry.ex25()
-        case 26: ex26()
-        case 27: ex27()
-        case 28: combos.ex28()
-        case 29: combos.ex29()
-        case 30: combos.ex30()
-        case 31: order.ex31()
-        case 32: order.ex32()
-        case 33: order.ex33()
-        case 34: date.ex34()
-        case 35: order.ex35()
-        case 36: order.ex36()
-        case 37: order.ex37()
-        case 38: order.ex38()
-        case 39: ex39()
-        case 40: date.ex40()
-        case 41: number2words.ex41()
-        case 42: number2words.ex42()
-        case 43: number2words.ex43()
-        case 44: number2words.ex44()
-        case 45: number2words.ex45()
-        case 46: number2words.ex46()
-        case 47: number2words.ex47()
-        case 48: end()
-        case _: print("Invalid number. Please enter a number between 1 and 27.")
+    while True:
+        try:
+
+            print("===================================")
+            print("Categories:")
+            print("[1]Temperature conversion.")
+            print("[2]Perimeter and area of geometric figures.") 
+            print("[3]Other calculations.")
+            print("[4]Compilations.")
+            print("[5]Order.")#THY END IS NOW
+            print("[6]Date and time.")
+            print("[7]Number to words.")
+            print("===================================")
+            print("Others")
+            print("[8] Exit")
+            print("[9] About")
+            print("[10] Help")
+            desiredCat = int(input("Enter your option: "))
+
+            #with great help from meid menid amei da but she's not in the same class :(
+            match desiredCat:
+                case 1: Cat1()
+                case 2: Cat2()
+                case 3: Cat3()
+                case 4: Cat4()
+                case 5: Cat5()
+                case 6: Cat6()
+                case 7: Cat7()
+                case 8: die()#CRUSH
+                case 9: about()
+                case 10: helpf()
+                case _: print("Invalid entry. Please enter a valid number.")
+
+            break
+        except ValueError:
+            ValueErrorEx()
+
 
 def end():
     print("Thank you for using this program. Goodbye!")
     exit()
 
+def about():
+    webbrowser.open("https://www.github.com/Material-PUCC/PythonProjects")
+
 def ex26():
     print("\n\nExercise 26: BMI calculating")
     while True:
         try:
-            weightI = input("\n\nEnter your weight in kg: ")
-            weight = float(weightI)
+            weight = float(input("\n\nEnter your weight in kg: "))
             if(weight <= 0):
                 print("Weight can't be lower or equal to zero.")
                 continue
@@ -158,10 +251,8 @@ def ex27():
     while True:
         try:
             print("The first-degree equation is in the form of ax+b=0.")
-            aI = input("\n\nEnter the value of a: ")
-            bI = input("\n\nEnter the value of b: ")
-            a = float(aI)
-            b = float(bI)
+            a = float(input("\n\nEnter the value of a: "))
+            b = float(input("\n\nEnter the value of b: "))
             x = -b/a
             print("The value of x is: ", x, sep="")
             break
@@ -177,12 +268,9 @@ def ex39():
     while True:
         try:
             print("The second-degree equation is in the form of ax²+bx+c=0.")
-            aI = input("\n\nEnter the value of a: ")
-            a = float(aI)
-            bI = input("\n\nEnter the value of b: ")
-            b = float(bI)
-            cI = input("\n\nEnter the value of c: ")
-            c = float(cI)
+            a = float(input("\n\nEnter the value of a: "))
+            b = float(input("\n\nEnter the value of b: "))
+            c = float(input("\n\nEnter the value of c: "))
             delta = b**2 - 4*a*c
             if(delta < 0):
                 print("The equation has no roots.")
@@ -197,7 +285,7 @@ def ex39():
         except: 
             ValueErrorEx()
 
-def ex48():
+def die():
     print("\n\nExercise 48: Exit")
     end()
     
