@@ -13,7 +13,7 @@ def ex31():
             else: 
                 print("The numbers in ascending order are: ", num1,num2, ".", sep="")
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex32():
     print("\n\nExercise 32: 3 numbers organized in ascending order")
@@ -41,7 +41,7 @@ def ex32():
                     print("The numbers in ascending order are: ", num1,num2,num3, ".", sep=" ")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex33():
     print("\n\nExercise 33: 4 numbers organized in ascending order")
@@ -68,7 +68,7 @@ def ex33():
                 else:
                     print("The numbers in ascending order are: ", num2,num1,num3,num4, ".", sep=" ")
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 
             

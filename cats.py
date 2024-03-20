@@ -17,9 +17,9 @@ def ex26():
             print("Your BMI is: ", bmi, sep="")
             break
         except ZeroDivisionError:
-            ValueErrorEx()
+            main.ValueErrorEx()
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 
 def ex27():
@@ -33,9 +33,9 @@ def ex27():
             print("The value of x is: ", x, sep="")
             break
         except ZeroDivisionError:
-            ZeroInputEx()
+            main.ZeroInputEx()
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 
 
@@ -59,7 +59,7 @@ def ex39():
                 print("The equation has two roots: ", x1, " and ", x2, ".", sep="")
             break
         except: 
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def retornar():
     main.cls()
@@ -101,7 +101,7 @@ def Cat1():
                 case _: print("Invalid entry. Please enter a valid number.")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def Cat2():
     while True:
@@ -148,7 +148,7 @@ def Cat2():
                 case _: print("Invalid entry. Please enter a valid number.")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
     
 def Cat3():
     while True:
@@ -168,7 +168,7 @@ def Cat3():
                 case _: print("Invalid entry. Please enter a valid number.")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def Cat4():
     while True:
@@ -187,15 +187,15 @@ def Cat4():
                 case _: print("Invalid entry. Please enter a valid number.")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def Cat5():
     while True:
         try:
             print("Select the exercise you want to execute.")
-            print("[31] Ascending order of 3 numbers.")
-            print("[32] Ascending order of 4 numbers.")
-            print("[33] Ascending order of 5 numbers.")
+            print("[31] Ascending order of 2 numbers.")
+            print("[32] Ascending order of 3 numbers.")
+            print("[33] Ascending order of 4 numbers.")
             print("[34] Return.")
             desired = int(input("Enter the number of the exercise you want to run from the above:  "))
             match desired:
@@ -206,7 +206,7 @@ def Cat5():
                 case _: print("Invalid entry. Please enter a valid number.")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def Cat6():
     while True:
@@ -223,7 +223,7 @@ def Cat6():
                 case _: print("Invalid entry. Please enter a valid number.")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def Cat7():
     while True:
@@ -250,4 +250,4 @@ def Cat7():
                 case 48: retornar()
                 case _: print("Invalid entry. Please enter a valid number.")
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
