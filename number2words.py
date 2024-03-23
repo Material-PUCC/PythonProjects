@@ -82,10 +82,10 @@ def ex46():
             print("Your number is ", num2words(num, to = 'currency', lang='pt_BR'))
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex47():
-    print("\n\nExercise 47: Monetary value between R$-999.99 and R$999.99 written in words")
+    '''print("\n\nExercise 47: Monetary value between R$-999.99 and R$999.99 written in words")
     while True:
         try:
             num = input("\n\nEnter a value between R$-999.99 and R$999.99: ")
@@ -96,4 +96,34 @@ def ex47():
             print("Your number is", num2words(num, to = 'currency', lang = 'pt_BR'))
             break
         except ValueError:
-            ValueErrorEx()
+            ValueErrorEx()'''
+    print("\n\nExercise 47: Monetary value between R$-999.99 and R$999.99 written in words")
+    while True:
+        try:
+            num = input("\n\nEnter a value between R$-999.99 and R$999.99: ")
+            if (num < -999.99 or num > 999.99):
+                print("Invalid input. Please enter a number between R$-999.99 and R$999.99.")
+                continue
+            if (num[0] == '-'):
+                numNeg = True
+                char1 = num[1]
+                char2 = num[2]
+                char3 = num[3]
+                char4 = num[5]
+                char5 = num[6]
+                
+                num1 = int(char1)
+                match num1:
+                    case 0: num1 = "zero"
+                    case 1: num1 = "one"
+                    case 2: num1 = "two"
+                    case 3: num1 = "three"
+                    case 4: num1 = "four"
+                    case 5: num1 = "five"
+                    case 6: num1 = "six"
+                    case 7: num1 = "seven"
+                    case 8: num1 = "eight"
+                    case 9: num1 = "nine"
+                
+        except ValueError:
+            main.ValueErrorEx()
