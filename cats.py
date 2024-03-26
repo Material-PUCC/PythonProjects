@@ -1,5 +1,6 @@
 import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser
 
+
 def ex26():
     print("\n\nExercise 26: BMI calculating")
     while True:
@@ -59,6 +60,26 @@ def ex39():
                 print("The equation has two roots: ", x1, " and ", x2, ".", sep="")
             break
         except: 
+            main.ValueErrorEx()
+            
+def ex57():
+    print("\n\nExercise 57: Enter a natural number.")
+    while True:
+        try:
+            #how do i check if this is a palindrome?
+            num = int(input("Enter a natural number: "))
+            reverse = num[::-1]
+            length = len(str(num))
+            if (length < 3):
+                print("Please enter a number with more than 2 digits.")
+                continue
+            else:
+                 if (num == reverse):
+                    print("The number is a palindrome.")
+                 else:
+                    print("The number is a palindrome.")
+                    break
+        except ValueError:
             main.ValueErrorEx()
 
 def retornar():
@@ -164,6 +185,7 @@ def Cat3():
                 case 26: ex26()
                 case 27: ex27()
                 case 39: ex39()
+                case 57: ex57()
                 case 41: retornar()
                 case _: print("Invalid entry. Please enter a valid number.")
             break
@@ -249,5 +271,14 @@ def Cat7():
                 case 47: number2words.ex47()
                 case 48: retornar()
                 case _: print("Invalid entry. Please enter a valid number.")
+        except ValueError:
+            main.ValueErrorEx()
+
+def Cat8():
+    while True:
+        try:
+            print("Select the exercise you want to execute.")
+            print("")
+        
         except ValueError:
             main.ValueErrorEx()
