@@ -178,7 +178,7 @@ def Cat3():
             print("[26] BMI calculating.")
             print("[27] First-degree equation square root.")
             print("[39] Second-degree equation square root.")
-            print("[40] Valid date and year check.")
+            print("[57] Palindrome checker.")
             print("[41] Return.")
             desired = int(input("Enter the number of the exercise you want to run from the above:  "))
             match desired:
@@ -278,7 +278,12 @@ def Cat8():
     while True:
         try:
             print("Select the exercise you want to execute.")
-            print("")
+            print("[58] Natural number rectangle.")
+            print("[59] Natural number hollow rectangle.")
+            print("[60] Natural number triangle.")
+            print("[61] Natural number hollow triangle.")
+            print("[62] Natural number diamond.")
+            print("[63] Natural number hollow diamond.") 
         
         except ValueError:
             main.ValueErrorEx()
