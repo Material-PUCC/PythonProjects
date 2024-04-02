@@ -1,8 +1,6 @@
 import main
 
 def ex58():
-    #enter a natural number and write an amount of lines equal to the number in the shape of a rectangle
-    print("\n\nExercise 58: Enter a natural number.")
     while True:
         try:
             num = int(input("Enter a natural number: "))
@@ -34,7 +32,6 @@ def ex58():
             main.ValueErrorEx()
 
 def ex59():
-    print("\n\nExercise 59: Enter a natural number.")
     #how do i print the same rectangle but hollow?
     while True:
         try:
@@ -44,9 +41,46 @@ def ex59():
             else:
                 for i in range(num):
                     if i == 0 or i == num - 1:
-                        print("O" * num)
+                        for j in range(num):
+                            print("O", end="")
                     else:
-                        print("O" + " " * (num - 2) + "O")
+                        print("O", end="")
+                        for j in range(num - 2):
+                            print(" ", end="")
+                        print("O", end="")
+                    print()
                 break
         except ValueError:
             main.ValueErrorEx()
+
+def ex60():
+    while True:
+        try:
+            num = int(input("Enter a natural number: "))
+            if num <= 1:
+                main.ZeroInputEx()
+            else:
+                for i in range(num):
+                    for j in range(num):
+                        if i == 0 or i == num - 1:
+                            print("O", end="")
+                        else:
+                            if j == 0 or j == num - 1:
+                                print("O", end="")
+                            else:
+                                print(" ", end="")
+                    print()
+                break
+        except ValueError:
+            main.ValueErrorEx()
+
+
+def ex61():
+    print('a')
+def ex62():
+    print("a")
+
+def ex63():
+    print('a')
+
+

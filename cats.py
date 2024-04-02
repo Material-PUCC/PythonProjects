@@ -1,6 +1,5 @@
 import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser, lineprinting
 
-
 def ex26():
     print("\n\nExercise 26: BMI calculating")
     while True:
@@ -65,6 +64,25 @@ def ex39():
 def ex50():
     while True:
         try:
+            '''
+            if num in [0,1]: # if numero ==0 or numero==1:
+                print (num, "nao primo!"
+            else:
+                possivelDivisor = 2
+                metade = num//2
+
+                prime = True
+                while possivelDivisor<=metade:
+                if num%possivelDivisor==0:
+                    prime = False
+                    break
+                possivelDivisor+=1
+            
+            if prime:
+                print("this is a prime number.")
+            else:
+                print("this is not a prime number.")
+            '''
             num = int(input("Enter a natural number: "))
             half = num // 2
             if num <= 1:
@@ -311,5 +329,11 @@ def Cat8():
             match desired:
                 case 58: lineprinting.ex58()
                 case 59: lineprinting.ex59()
+                case 60: lineprinting.ex60()
+                case 61: lineprinting.ex61()
+                case 62: lineprinting.ex62()
+                case 63: lineprinting.ex63()
+                case _: print("Invalid entry. Please enter a valid number.")
+
         except ValueError:
             main.ValueErrorEx()

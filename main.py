@@ -24,9 +24,9 @@ def main():
             print("[8]Drawing.")
             print("===================================")
             print("Others: ")
-            print("[8]Exit.")
-            print("[9]About.")
-            print("[10]Prointer.")
+            print("[9]Exit.")
+            print("[10]About.")
+            print("[11]Prointer.")
             desiredCat = int(input("Enter your option: "))
             #with great help from meid menid amei da but she's not in the same class :(
             match desiredCat:
@@ -37,7 +37,7 @@ def main():
                 case 5: cats.Cat5()
                 case 6: cats.Cat6()
                 case 7: cats.Cat7()
-                case 8 : cats.Cat8()
+                case 8: cats.Cat8()
                 case 9: die()#CRUSH
                 case 10: seeRepo()
                 case 11: prointer()
