@@ -12,7 +12,7 @@ def ex1():
             print("The temperature in °F is: ", FTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex2():
     print("\n\nExercise 2: °F to °C converter.")
@@ -27,7 +27,7 @@ def ex2():
             print("The temperature in °C is: ", CTemp, sep="")
             break   
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex3():
     print("\n\nExercise 3:  °C to °K converter.")
@@ -42,7 +42,7 @@ def ex3():
             print("The temperature in °K is: ", KTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex4():
     print("\n\nExercise 4: °K to °C converter.")
@@ -57,7 +57,7 @@ def ex4():
             print("The temperature in °C is: ", CTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex5(): 
     print("\n\nExercise 5: °C to °R converter.")
@@ -72,7 +72,7 @@ def ex5():
             print("The temperature in °R is: ", RTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex6():
     print("\n\nExercise 6: °R to °C converter.")
@@ -87,7 +87,7 @@ def ex6():
             print("The temperature in °C is: ", CTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex7():
     print("\n\nExercise 7: F to K converter.")
@@ -103,7 +103,7 @@ def ex7():
             print("The temperature in °K is: ", KTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
     
 def ex8():
     print("\n\nExercise 8: °K to °F converter.")
@@ -119,7 +119,7 @@ def ex8():
             print("The temperature in °F is: ", FTemp, sep="")  
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex9():
     print("\n\nExercise 9: °F to °R converter.")
@@ -135,7 +135,7 @@ def ex9():
             print("The temperature in °R is: ", RTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex10():
     print("\n\nExercise 10: °R to °F converter.")
@@ -151,7 +151,7 @@ def ex10():
             print("The temperature in °F is: ", FTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex11():
     print("\n\nExercise 11: °K to °R converter.")
@@ -167,7 +167,7 @@ def ex11():
             print("The temperature in °R is: ", RTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex12():
     print("\n\nExercise 12: °R to °K converter.")
@@ -183,4 +183,4 @@ def ex12():
             print("The temperature in °K is: ", KTemp, sep="")
             break
         except:
-            list.ValueErrorEx()
+            main.ValueErrorEx()

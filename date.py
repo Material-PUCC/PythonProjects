@@ -22,7 +22,7 @@ def ex34():
             print("The time is: ", hour, ":", minute, ":", second, ".", sep="")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex40():
     print("\n\nExercise 40: Valid date and year check")
@@ -64,4 +64,4 @@ def ex40():
             print("The date is: ", day, "/", month, "/", year, ".", sep="")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()

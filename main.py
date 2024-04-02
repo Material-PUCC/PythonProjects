@@ -1,4 +1,4 @@
-import webbrowser, cats, os, lineprinting
+import webbrowser, cats, os
 def ValueErrorEx():
     print("Invalid input. Please enter a valid number.")
 
@@ -21,26 +21,26 @@ def main():
             print("[5]Order.")#THY END IS NOW
             print("[6]Date and time.")
             print("[7]Number to words.")
+            print("[8]Drawing.")
             print("===================================")
-            print("Others")
+            print("Others: ")
             print("[8]Exit.")
             print("[9]About.")
             print("[10]Prointer.")
-            print("[11]ex58")
             desiredCat = int(input("Enter your option: "))
             #with great help from meid menid amei da but she's not in the same class :(
             match desiredCat:
-                case 1: cats.Cat1()
+                case 1: cats.Ca3t1()
                 case 2: cats.Cat2()
                 case 3: cats.Cat3()
                 case 4: cats.Cat4()
                 case 5: cats.Cat5()
                 case 6: cats.Cat6()
                 case 7: cats.Cat7()
-                case 8: die()#CRUSH
-                case 9: seeRepo()
-                case 10: prointer()
-                case 11: lineprinting.ex58()
+                case 8 : cats.Cat8()
+                case 9: die()#CRUSH
+                case 10: seeRepo()
+                case 11: prointer()
                 case _: print("Invalid entry. Please enter a valid number.")
 
             break

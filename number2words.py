@@ -1,4 +1,5 @@
 import main
+import num2words
 
 def ex41():
     print("\n\nExercise 41: Natural number up to 9 written in words")
@@ -12,7 +13,7 @@ def ex41():
             print("Your number is ", num2words(num), "!")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex42():
     print("\n\nExercise 42: Natural number from -9 to 9 written in words")
@@ -26,7 +27,7 @@ def ex42():
             print("Your number is ", num2words(num), "!")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex43():
     print("\n\nExercise 43: Natural number from -999 to 999 written in words")
@@ -40,7 +41,7 @@ def ex43():
             print("Your number is ", num2words(num), "!")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex44():
     print("\n\nExercise 44: Natural number from -999 to 999 written in words")
@@ -54,7 +55,7 @@ def ex44():
             print("Your number is ", num2words(num), "!")
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex45():
     print("\n\nExercise 45: Monetary value between R$-9.99 and R$9.99 written in words")
@@ -68,7 +69,7 @@ def ex45():
             print("Your number is ", num2words(num, to = 'currency', lang='pt_BR'))
             break
         except ValueError:
-            ValueErrorEx()
+            main.ValueErrorEx()
 
 def ex46():
     print("\n\nExercise 46: Monetary value between R$-99.99 and R$99.99 written in words")

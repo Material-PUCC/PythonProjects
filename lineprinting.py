@@ -25,11 +25,28 @@ def ex58():
                         print()
                         lin += 1
                 '''
-                #how can i do it without multiplying a string by the number?
                 for i in range(num):
                     for j in range(num):
                         print("O", end="")
                     print()
+                break
+        except ValueError:
+            main.ValueErrorEx()
+
+def ex59():
+    print("\n\nExercise 59: Enter a natural number.")
+    #how do i print the same rectangle but hollow?
+    while True:
+        try:
+            num = int(input("Enter a natural number: "))
+            if num <= 1:
+                main.ZeroInputEx()
+            else:
+                for i in range(num):
+                    if i == 0 or i == num - 1:
+                        print("O" * num)
+                    else:
+                        print("O" + " " * (num - 2) + "O")
                 break
         except ValueError:
             main.ValueErrorEx()

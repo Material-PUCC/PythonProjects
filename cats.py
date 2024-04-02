@@ -1,4 +1,4 @@
-import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser
+import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser, lineprinting
 
 
 def ex26():
@@ -60,6 +60,27 @@ def ex39():
                 print("The equation has two roots: ", x1, " and ", x2, ".", sep="")
             break
         except: 
+            main.ValueErrorEx()
+
+def ex50():
+    while True:
+        try:
+            num = int(input("Enter a natural number: "))
+            half = num // 2
+            if num <= 1:
+                print("Please enter a natural number.")
+                continue
+            is_prime = True
+            for i in range(2, half + 1):
+                if num % i == 0:
+                    is_prime = False
+                    break
+            if is_prime:
+                print("This is a prime number.")
+            else:
+                print("This is not a prime number.")
+            break
+        except ValueError:
             main.ValueErrorEx()
             
 def ex57():
@@ -178,6 +199,7 @@ def Cat3():
             print("[26] BMI calculating.")
             print("[27] First-degree equation square root.")
             print("[39] Second-degree equation square root.")
+            print("[50] Prime number checking.")
             print("[57] Palindrome checker.")
             print("[41] Return.")
             desired = int(input("Enter the number of the exercise you want to run from the above:  "))
@@ -185,6 +207,7 @@ def Cat3():
                 case 26: ex26()
                 case 27: ex27()
                 case 39: ex39()
+                case 50: ex50()
                 case 57: ex57()
                 case 41: retornar()
                 case _: print("Invalid entry. Please enter a valid number.")
@@ -284,6 +307,9 @@ def Cat8():
             print("[61] Natural number hollow triangle.")
             print("[62] Natural number diamond.")
             print("[63] Natural number hollow diamond.") 
-        
+            desired = int(input("Enter the number of the exercise you want to run from the above: "))
+            match desired:
+                case 58: lineprinting.ex58()
+                case 59: lineprinting.ex59()
         except ValueError:
             main.ValueErrorEx()
