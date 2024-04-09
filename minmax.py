@@ -61,6 +61,7 @@ def ex4():
                 if num < lowest:
                     lowest = num
             print("The lowest number is", lowest, "with index", list1.index(lowest), ".")
+            sortedlis = list1.sort()
             break
         except ValueError:
             main.ValueErrorEx()
