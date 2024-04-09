@@ -23,14 +23,18 @@ def main():
             print("[7]Number to words.")
             print("[8]Drawing.")
             print("===================================")
+            print("Lists:")
+            print("[9]Min and max.")
+            print("[10]Statistics.")
+            print("[11]Number position.")
             print("Others: ")
-            print("[9]Exit.")
-            print("[10]About.")
-            print("[11]Prointer.")
+            print("[12]Exit.")
+            print("[13]About.")
+            print("[14]Prointer.")
             desiredCat = int(input("Enter your option: "))
             #with great help from meid menid amei da but she's not in the same class :(
             match desiredCat:
-                case 1: cats.Ca3t1()
+                case 1: cats.Cat1()
                 case 2: cats.Cat2()
                 case 3: cats.Cat3()
                 case 4: cats.Cat4()
@@ -38,9 +42,12 @@ def main():
                 case 6: cats.Cat6()
                 case 7: cats.Cat7()
                 case 8: cats.Cat8()
-                case 9: die()#CRUSH
-                case 10: seeRepo()
-                case 11: prointer()
+                case 9: cats.Cat9()
+                #case 10: 
+                #case 11: 
+                case 12: die()#CRUSH
+                case 13: seeRepo()
+                case 14: prointer()
                 case _: print("Invalid entry. Please enter a valid number.")
 
             break

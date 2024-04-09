@@ -1,4 +1,4 @@
-import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser, lineprinting
+import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser, lineprinting, minmax
 
 def ex26():
     print("\n\nExercise 26: BMI calculating")
@@ -335,5 +335,19 @@ def Cat8():
                 case 63: lineprinting.ex63()
                 case _: print("Invalid entry. Please enter a valid number.")
 
+        except ValueError:
+            main.ValueErrorEx()
+
+def Cat9():
+    while True:
+        try:
+            print("Select the exercise you want to execute.")
+            print("[3]Highest number in list.")
+            print("[4]Lowest number in list.")
+            
+            desired = int(input("Enter the number of the exercise you want to run from the above: "))
+            match desired:
+                case 3: minmax.ex3()
+                case 4: minmax.ex4()
         except ValueError:
             main.ValueErrorEx()
