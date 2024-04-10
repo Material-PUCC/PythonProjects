@@ -1,21 +1,50 @@
 import main
 
 def ex1():
-    print("ok")
-def ex2():
-    '''
-    lista = []
-    atual = 1
-    while atual <= quantidade:
-        while True: 
-            try: numero = float(input("Digite um número para incluir na lista"))
+    while True:
+        try:          
+            list1 = []
+            i = 1
+            times = int(input("\n\nEnter how many numbers you want in the list: "))      
+
+            while i <= times:
+                while True:
+                    try:
+                        num = int(input("Insert a number to the list: "))
+                        break
+                    except ValueError:
+                        main.ValueErrorEx() 
+                list1.append(num)
+                i = i + 1
+            total = 0
+            for num in list1:
+                total = total + num
+            print("The sum of the numbers in the list is: ", total)
             break
         except ValueError:
-            print("Por favor, insira um número.")
+            main.ValueErrorEx()
         
-    lista.append(numero)
-    atual+=1 #or atual=atual+1
-    
-    
-    '''
-    print("ok")
+def ex2():
+    while True:
+        try:
+            list1 = []
+            i = 1
+            times = int(input("\n\nEnter how many numbers you want in the list: "))        
+            while i <= times:
+                while True:
+                    try:
+                        num = int(input("Insert a number to the list: "))
+                        break
+                    except ValueError:
+                        main.ValueErrorEx() 
+                list1.append(num)
+                i = i + 1
+            total = 0
+            for num in list1:
+                total += num
+                avg = total / len(list1)
+            print("The sum of the numbers in the list is: ", avg)
+            break
+        except ValueError:
+            main.ValueErrorEx()
+  

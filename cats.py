@@ -1,4 +1,4 @@
-import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser, lineprinting, minmax
+import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser, lineprinting, minmax, liststats
 
 def ex26():
     print("\n\nExercise 26: BMI calculating")
@@ -349,5 +349,20 @@ def Cat9():
             match desired:
                 case 3: minmax.ex3()
                 case 4: minmax.ex4()
+        except ValueError:
+            main.ValueErrorEx()
+
+def Cat10():
+    while True:
+        try:
+            print("Select the exercise you want to execute.")
+            print("[1]Sum of list.")
+            print("[2]Average of list.")
+                
+            desired = int(input("Enter the number of the exercise you want to run from the above: "))
+            match desired:
+                case 1: liststats.ex1()
+                case 2: liststats.ex2()
+            break
         except ValueError:
             main.ValueErrorEx()

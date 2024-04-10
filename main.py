@@ -43,7 +43,7 @@ def main():
                 case 7: cats.Cat7()
                 case 8: cats.Cat8()
                 case 9: cats.Cat9()
-                #case 10: 
+                case 10: cats.Cat10()
                 #case 11: 
                 case 12: die()#CRUSH
                 case 13: seeRepo()
