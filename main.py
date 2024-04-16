@@ -27,10 +27,11 @@ def main():
             print("[9]Min and max.")
             print("[10]Statistics.")
             print("[11]Number position.")
+            print("[12]Nested list.")
             print("Others: ")
-            print("[12]Exit.")
-            print("[13]About.")
-            print("[14]Prointer.")
+            print("[13]Exit.")
+            print("[14]About.")
+            print("[15]Prointer.")
             desiredCat = int(input("Enter your option: "))
             #with great help from meid menid amei da but she's not in the same class :(
             match desiredCat:
@@ -44,10 +45,11 @@ def main():
                 case 8: cats.Cat8()
                 case 9: cats.Cat9()
                 case 10: cats.Cat10()
-                #case 11: 
-                case 12: die()#CRUSH
-                case 13: seeRepo()
-                case 14: prointer()
+                case 11: cats.Cat11()
+                case 12: cats.Cat12()
+                case 13: die()#CRUSH
+                case 14: seeRepo()
+                case 15: prointer()
                 case _: print("Invalid entry. Please enter a valid number.")
 
             break

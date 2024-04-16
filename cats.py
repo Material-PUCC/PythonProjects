@@ -1,4 +1,4 @@
-import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser, lineprinting, minmax, liststats
+import main, math, temp, geometry, time, datetime, combos, order, date, number2words, webbrowser, lineprinting, minmax, liststats, nestedlist
 
 def ex26():
     print("\n\nExercise 26: BMI calculating")
@@ -83,10 +83,10 @@ def ex50():
             else:
                 print("this is not a prime number.")
             '''
-            num = int(input("Enter a natural number: "))
+            num = int(input("Enter a number to check if it is a prime: "))
             half = num // 2
             if num <= 1:
-                print("Please enter a natural number.")
+                print("Please enter a valid number.")
                 continue
             is_prime = True
             for i in range(2, half + 1):
@@ -366,3 +366,26 @@ def Cat10():
             break
         except ValueError:
             main.ValueErrorEx()
+
+def Cat11():
+    while True:
+        try:
+            print("Not implemented")
+            break
+        except ValueError:
+            main.ValueErrorEx()
+
+def Cat12():
+    while True:
+        try:
+            print("Select the exercise you want to execute.")
+            print("[11]Get number most to left in a list inside a list.")
+
+            desired = int(input("Enter the number of the exercise you want to run from the above: "))
+            match desired:
+                case 11: nestedlist.ex11()
+            break
+        except ValueError:
+            main.ValueErrorEx()
+            
+            

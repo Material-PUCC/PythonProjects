@@ -32,7 +32,6 @@ def ex58():
             main.ValueErrorEx()
 
 def ex59():
-    #how do i print the same rectangle but hollow?
     while True:
         try:
             num = int(input("Enter a natural number: "))
@@ -54,22 +53,37 @@ def ex59():
             main.ValueErrorEx()
 
 def ex60():
+    '''
+    qtdLins=qtdCols=int(input("Deseja um triângulo de quantas linhas?"))
+    if (qtdLins <= 1):
+        print("A quantidade de linhas deve ser maior que 1!")
+    else:
+        lin = 1
+        while lin <= qtdLins:
+            col = 1
+            while col <= qtdCols:
+                if (col == 1 or col == lin or lin == qtdLins):
+                    print("O", end="")
+                else:
+                    print(" ", end="")
+                col += 1
+            print()
+            lin += 1
+    '''
     while True:
-        try:
-            num = int(input("Enter a natural number: "))
+        try:      
+            num = int(input("How many lines do you want in your acute triangle? "))
             if num <= 1:
                 main.ZeroInputEx()
             else:
                 for i in range(num):
                     for j in range(num):
-                        if i == 0 or i == num - 1:
+                        if j == 0 or j == i or i == num - 1:
                             print("O", end="")
                         else:
-                            if j == 0 or j == num - 1:
-                                print("O", end="")
-                            else:
-                                print(" ", end="")
+                            print(" ", end="")
                     print()
+                
                 break
         except ValueError:
             main.ValueErrorEx()
