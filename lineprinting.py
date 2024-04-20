@@ -53,41 +53,21 @@ def ex59():
             main.ValueErrorEx()
 
 def ex60():
-    '''
-    qtdLins=qtdCols=int(input("Deseja um triângulo de quantas linhas?"))
-    if (qtdLins <= 1):
-        print("A quantidade de linhas deve ser maior que 1!")
-    else:
-        lin = 1
-        while lin <= qtdLins:
-            col = 1
-            while col <= qtdCols:
-                if (col == 1 or col == lin or lin == qtdLins):
-                    print("O", end="")
-                else:
-                    print(" ", end="")
-                col += 1
-            print()
-            lin += 1
-    '''
     while True:
-        try:      
-            num = int(input("How many lines do you want in your acute triangle? "))
+        try:
+            num = int(input("Input a natural number: "))
             if num <= 1:
-                main.ZeroInputEx()
+                print("Invalid number, please try again.")
             else:
                 for i in range(num):
-                    for j in range(num):
-                        if j == 0 or j == i or i == num - 1:
-                            print("O", end="")
-                        else:
-                            print(" ", end="")
+                    for j in range(num - i - 1):
+                        print(' ', end="")
+                    for k in range(i + 1):
+                        print('O ', end="")
                     print()
-                
-                break
+            break
         except ValueError:
             main.ValueErrorEx()
-
 
 def ex61():
     print('a')
